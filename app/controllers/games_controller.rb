@@ -12,7 +12,6 @@ class GamesController < ApplicationController
         @guess = @guess.split('')
         @randomLetters = params[:randomLetters]
         @randomLetters = @randomLetters.split('')
-        
         @guess.each do |letter| 
             if @randomLetters.include?(letter)
                 uri = URI.open("https://wagon-dictionary.herokuapp.com/#{@guess.join}")
