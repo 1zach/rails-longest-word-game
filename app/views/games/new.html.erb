@@ -1,0 +1,15 @@
+<h1 class = "my-3 p-3"> Make the longest word you can from the letters below</h1>
+<div class = "container">
+<p> <% @randomLetters.each do |letter|%>
+    <span class = "p-3 bg-primary text-white rounded"><%=letter%></span>
+    <% end%>
+
+<form action = "score" method="post" data-turbo="false">
+    <input type = "text" name ="longest" placeholder = "Longest Word">
+    <input type = "submit" value = "Submit">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token%>
+    <%= hidden_field_tag :randomLetters, @randomLetters%>
+</form>
+
+</div>
+

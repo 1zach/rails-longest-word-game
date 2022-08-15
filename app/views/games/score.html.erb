@@ -1,0 +1,14 @@
+
+<div class = "container">
+<h1>Result</h1>
+
+    <% if @checkValid%>
+    <p><span class = "my-3 bg-primary rounded text-white p-3"><%=@checkValid %></span> is a winning word!</p>
+    <% elsif @checkNotWord%>
+    <p><span class = "my-3 bg-primary rounded text-white p-3"><%=@checkNotWord%></span> is not a valid word</p>
+    <% elsif @checkInvalid%>
+    <p><%=@checkInvalid%></p>
+    <br>
+    <%end%>
+    <%= link_to "Play Again", new_path %>
+</div>
